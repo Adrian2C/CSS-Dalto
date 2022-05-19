@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades GRID en CSS</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+    <div class="texto-aprendizaje">
+        <p>Cuando hay mas elementos creados que items especificados en css, se usa grid-auto-row/column
+            <br>
+            cuando se crean mas items solos, estos van a ser por defecto filas(rows)
+            <br>
+            y se puede editar el tamaño por defecto con grid auto rows. A estos se le pone solo el tamaño 1 y este se aplica a los demas
+            <br><br>
+            para que el elemento nuevo se cree como columna y no como row, se tiene que usar la opcion: GRID-AUTO-FLOW:COLUMN/ROW
+            Y luego si se aplica 
+            GRID AUTO-COLUMN/ROW
+        </p>
+    </div>
+    <body>
+        <div class="grid-container2">
+            <div class="grid-item2">1</div>
+            <div class="grid-item2">2</div>
+            <div class="grid-item2">3</div>
+            <div class="grid-item2">4</div>
+            <div class="grid-item2">5</div>
+            <div class="grid-item2">6</div>
+            <div class="grid-item2">7</div>
+            <div class="grid-item2">8</div>
+            <div class="grid-item2">9</div>
+            <div class="grid-item2">7</div>
+            <div class="grid-item2">8</div>
+            <div class="grid-item2">9</div>
+            <div class="grid-item2">10</div>
+            <div class="grid-item2">11</div>
+            <div class="grid-item2">12</div>
+            <div class="grid-item2">13</div>
+            <div class="grid-item2">14</div>
+            <div class="grid-item2">15</div>
+            <div class="grid-item2">16</div>
+            <div class="grid-item2">17</div>
+        </div><br><br>
+        <p>con grid auto flow:dense, los espacios que se quedaron vacios (sin items dentro), hace que el item siguiente mas cercano ocupe ese lugar. este se pone en el GRID-CONTAINER</p>
+        <p>para que las columnas explicitas (o agregadas extra solas) tengan fr y se autoajusten solas al navgador se usa GRID-AUTO-ROW/COLUMN:1FR; </p>
+        <p>
+            ------------------------------------------------------------------------------------------------------------
+        </p>
+        <p>GRID DINAMICO</p>
+        <P>Para una grilla dinamica, se utiliza MINMAX(), MIN-CONTENT(), MAX-CONTENT(),
+            <br>
+            Con Cantidad:
+            <p>Auto-fill</p>
+            <p>auto-fit</p>
+        </P>
+        <p>las caracteristicas minmas mincontent maxcontent se utilizan dentro del repeat</p>
+        <div class="grid-container3">
+            <div class="grid-item3">1</div>
+            <div class="grid-item3">2</div>
+            <div class="grid-item3">lorem etnvm vmr ´po</div>
+            <div class="grid-item3">4</div>
+            <div class="grid-item3">5</div>
+            <div class="grid-item3">6</div>
+            <div class="grid-item3">7</div>
+            <div class="grid-item3">8</div>
+            <div class="grid-item3">9</div>
+            </div>
+            <p>Max-Content: sirve para que utilizen el espacio maximo/completo del objeto que contienen sin importar el tamaño</p>
+            <p>Minmax: minimo y maximo que puede medir el contenido</p>
+            <p>Min-content: es para que utilize el espacio minimo disponible, se usa dentro del repeat(minmax(min content(espacio minimo que puede usar), 200px(espacio maximo)))</p>
+            <p>Auto-Fill: Cuando se expande el contenedor, a medida que nos brinda espacio para mas items, los va insertando</p>
+            <p>Auto-fit: hace que los elementos que hay, se vayan expandiendo automaticamente para ocupar el espacio qeu tengan</p>
+            <br><br>
+            <!---------Alineacion y control de flujo------>
+            <h3>---------Alineacion y control de flujo---------</h3>
+            <div class="grid-container1">
+                <div class="grid-item4">1</div>
+                <div class="grid-item4">2</div>
+                <div class="grid-item4">3</div>
+                <div class="grid-item4">4</div>
+                <div class="grid-item4">5</div>
+                <div class="grid-item4">6</div>
+                <div class="grid-item4">7</div>
+                <div class="grid-item4">8</div>
+                <div class="grid-item4">9</div>
+
+            </div>
+            
+            La lineacion es General, por filas, columnas o individual. 
+            cada celda es un "flex-container", por eso se dice que la alineacion es individual. 
+            <br>
+            para alinea la celda en el EJE X, se usa Justify-items: start, end o center;
+            para alinear la celda en el eje Y se usa Align-items:start, center o end,
+            el que viene por defecto es STRETCH;
+
+            que diferencia hay entre Align-items y align-content, 
+            items, alinea las celdas propiamente dichas, y content, alinea la filas
+
+            para alinear las alinear las columnas, se usa justify-content,
+
+            <br><br>
+            para que el 5 y 6 esten pegados como estan en el mismo eje X, se modifica el Justify:self, del 6 a start, o del 5 a END
+            <br><br>para que el 4 y 7 esten juntos que estan en el EJE Y, se modifica el align-self del 4 con end y del 7 con start, asi uno sube y el otro baja
+            <br><br>
+            si se tiene que modificar el align y el justify, se puede cambiar en Place-self:align justify; como en el eleemnto 2
+
+            <br><br>si quiero modificar la posicion de un elemento en el Todo, se usa Order.
+            
+</body>
+</html>

@@ -1,0 +1,63 @@
+*{
+    font-family: "Sen", sans-serif;
+    font-weight: 100;
+}
+body{
+    background:radial-gradient(circle,#fff,#bbb);
+    padding:15px;
+}
+.grid-container{
+    background-color:rgb(29, 211, 218);
+    margin:10px;
+    display:grid;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "aside main main"
+    "aside main main"
+    "aside main main"
+    "footer footer footer";
+    grid-template-rows: repeat(auto-fill, 1fr);
+    /*lo ideal seria darle medidas fijas al header y al footer*/
+    height:92vh;
+    border:5px solid black;
+
+}
+ul li{
+    display:inline-block;
+}
+.grid-item{
+    padding:20px;
+}
+.grid-header{
+    background-color: #6f9;
+    grid-area:header;
+}
+.grid-footer {
+    background-color:#96f ;
+    grid-area:footer;
+}
+.grid-main{
+    background-color: rgb(255, 4, 201);
+    grid-area:main;
+}
+.grid-aside{
+    background-color: peru;
+    grid-area:aside;
+} 
+
+/*----------Dar nombres a lineas GRID--------------*/
+.grid-container2{
+    background:#444;
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    border:5px solid #000;
+}
+.grid-item2{
+    border:1px solid #000;
+    background:lightblue;
+}
+.grid-item2:first-child{
+    
+}

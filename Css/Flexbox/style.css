@@ -1,0 +1,30 @@
+*{
+    font-family: "Sen",Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+.flex-container{/* esto se le aplica al contenedor*/
+    display:flex;
+    /*flex-direction:row; 
+    
+    row, row-reverse, row-end, column, column-reverse,column-end
+    
+    flex-wrap:wrap; esto se puede abreviar usarndo flex-flow*/
+    
+    flex-flow: column wrap; /*usarlo solo si cambiamos
+    el flex direction y flex wrap*/
+}
+.flex-item{
+    background-color: #248;
+    color:#FFF;
+    margin:5px;
+    height:120px;
+    width:120px;
+    text-align:center;
+    min-width:120px;
+}
+.orange{
+    background-color:orange;
+}
+.green{
+    background-color: green;
+}
